@@ -1,0 +1,12 @@
+<h1 class="animated fadeIn fast">Héroes <small>DC y Marvel</small></h1>
+<hr>
+<div class="card-columns animated fadeIn fast">
+  
+  <!-- como escuchar el evento emitido desde l componente hijo
+   (heroeSeleccionado)="verHeroe( $event )" -->
+  <app-heroe-tarjeta 
+  (heroeSeleccionado)="verHeroe( $event )"
+  [heroe]="heroe" [idx]="i" *ngFor="let heroe of heroes; let i = index">
+
+  </app-heroe-tarjeta>
+</div>
